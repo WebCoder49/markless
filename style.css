@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #eee;
+}
+
+#neattribute-h1, #neattribute-buttons {
+    margin: 30px;
+    text-align: center;
+    font-family: sans-serif;
+
+    height: 30px;
+}
+#neattribute-h1 {
+    font-size: 30px;
+}
+#neattribute-h1 mark {
+    padding: 5px;
+    margin: 5px;
+    padding-right: 0;
+    margin-right: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: 1px solid darkgreen;
+}
+#neattribute-h1 span {
+    color: darkgreen;
+}
+
+#neattribute-buttons button {
+    font-size: 20px;
+}
+
+#neattribute-edit-rich {
+    outline: 1px solid darkgreen;
+
+    background-color: white;
+    width: calc(100% - 120px);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    height: calc(100vh - 300px);
+
+    overflow: auto;
+}
+.edit-html #neattribute-edit-rich {
+    display: none;
+}
+
+#neattribute-edit-html {
+    outline: 1px solid darkgreen;
+
+    width: calc(100% - 60px);
+    margin: 30px;
+    --padding: 30px;
+    border-radius: 30px;
+    height: calc(100vh - 240px);
+
+    display: none;
+}
+.edit-html #neattribute-edit-html {
+    display: grid;
+}
+
+#neattribute-buttons button {
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    transition: padding 0.1s, margin 0.1s;
+
+    background-color: white;
+    color: black;
+    border: 1px solid grey;
+
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#neattribute-buttons button:hover {
+    padding: 8px;
+    margin: 2px;
+    outline: 1px solid darkgreen;
+}
+
+.edit-html button#neattribute-toggle-edit-html {
+    background-color: darkgreen;
+    color: white;
+}

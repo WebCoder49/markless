@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neattribute</title>
+
+    <!--Prism.js-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <!--code-input-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/code-input.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/code-input.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/plugins/indent.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/plugins/auto-close-brackets.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/plugins/find-and-replace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/plugins/find-and-replace.min.css">
+
+    <script>codeInput.registerTemplate("editor", codeInput.templates.prism(Prism, [new codeInput.plugins.Indent(true, 4), new codeInput.plugins.AutoCloseBrackets(), new codeInput.plugins.FindAndReplace()]));</script>
+
+    <!--Local-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 id="neattribute-h1"><mark>Ne<span>at</span></mark><span>tribute</span></h1>
+    <p id="neattribute-buttons"><button onclick="cleanUp(document.querySelector('main')); document.querySelector('code-input').value = document.querySelector('main').innerHTML;">Clean Up</button><button onclick="document.body.classList.toggle('edit-html');" id="neattribute-toggle-edit-html">Toggle HTML</button></p>
+    <main id="neattribute-edit-rich" contenteditable oninput="document.querySelector('code-input').value = this.innerHTML;"></main>
+    <code-input id="neattribute-edit-html" language="HTML" placeholder="Enter HTML Here" onchange="document.querySelector('main').innerHTML = this.value;"></code-input>
+</body>
+</html>
