@@ -1,5 +1,7 @@
 ATTRIBUTES_TO_DELETE = [
     "STYLE",
+    "CLASS",
+    "ID",
     
     // Table
     "BORDER",
